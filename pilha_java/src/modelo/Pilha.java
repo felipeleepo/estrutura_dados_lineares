@@ -1,6 +1,6 @@
-package pilha.modelo;
+package modelo;
 
-import pilha.excecoes.EPilhaVazia;
+import excecoes.EPilhaVazia;
 
 /**
  *

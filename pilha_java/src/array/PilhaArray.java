@@ -1,7 +1,7 @@
-package pilha.array;
+package array;
 
-import pilha.modelo.Pilha;
-import pilha.excecoes.EPilhaVazia;
+import modelo.Pilha;
+import excecoes.EPilhaVazia;
 
 /**
  *

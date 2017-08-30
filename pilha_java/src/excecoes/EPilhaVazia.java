@@ -1,4 +1,4 @@
-package pilha.excecoes;
+package excecoes;
 
 /**
  *

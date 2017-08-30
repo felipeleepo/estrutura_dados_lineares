@@ -1,7 +1,7 @@
-package pilha.main;
+package main;
 
-import pilha.array.PilhaArray;
-import pilha.excecoes.EPilhaVazia;
+import array.PilhaArray;
+import excecoes.EPilhaVazia;
 
 /**
  *

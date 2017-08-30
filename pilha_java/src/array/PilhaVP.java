@@ -1,5 +1,5 @@
-package pilha.array;
-import pilha.excecoes.EPilhaVazia;
+package array;
+import excecoes.EPilhaVazia;
 /**
  *
  * @author Felipe
