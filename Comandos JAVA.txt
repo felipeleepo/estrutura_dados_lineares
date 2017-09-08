@@ -1,0 +1,11 @@
+Comandos JAVA
+
+Estando na pasta do projeto:
+
+Compilar -> javac -d bin/¹ src/*/*.java²
+¹ = diretorio para onde vão os class
+² = onde esoa os arquivos java
+
+Executar -> java -cp bin/¹ main.Main²
+¹ = diretorio onde estão os .class
+² = package.classe principal

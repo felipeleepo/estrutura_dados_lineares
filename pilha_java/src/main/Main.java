@@ -16,21 +16,23 @@ public class Main {
         try {
             s.push(5);
             s.push(3);
-            System.out.println(s.pop());
+            System.out.println("Pop: " + s.pop());
             s.push(2);
             s.push(8);
-            System.out.println(s.pop());
-            System.out.println(s.pop());
+            System.out.println("Pop: " +s.pop());
+            System.out.println("Pop: " +s.pop());
             s.push(9);
             s.push(1);
-            System.out.println(s.pop());
+            System.out.println("Pop: " +s.pop());
             s.push(7);
+            s.print();
             s.push(6);
-            System.out.println(s.pop());
-            System.out.println(s.pop());
+            System.out.println("Pop: " +s.pop());
+            System.out.println("Top: " +s.top());
+            System.out.println("Pop: " +s.pop());
             s.push(4);
-            System.out.println(s.pop());
-            System.out.println(s.pop());
+            System.out.println("Pop: " +s.pop());
+            System.out.println("Pop: " +s.pop());
             // System.out.println("Top = " + s.top());
 
         } catch (EPilhaVazia e) {
