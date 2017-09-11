@@ -23,7 +23,24 @@ public class FilaArray implements IFila{
     
     public void enfileirar(Object x){
     	if(size() == n - 1){
-    		System.out.println("Aumentar");
+            System.out.println("aumentando  ");
+            Object[] o_aux;
+    		if(op == 0){
+                o_aux  = new Object[n*2];                
+            }else{
+                o_aux = new Object[n+op];
+            }
+            int cont_aux = 0;
+            int j;
+            for (j = i; j < n ;j++ ) {
+                o_aux[cont_aux] = o[j];
+                cont_aux++;
+                j = (j+1) % n;
+            }
+            o_aux[f] = x;
+            o = o_aux; 
+            f++;
+            n = o.length;
      	}else{
      		o[f] = x;
     		f = (f+1) % n;
