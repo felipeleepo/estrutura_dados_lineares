@@ -9,3 +9,12 @@ Compilar -> javac -d bin/¹ src/*/*.java²
 Executar -> java -cp bin/¹ main.Main²
 ¹ = diretorio onde estão os .class
 ² = package.classe principal
+
+
+Ligar Apache -> ~/Programas/apache-tomcat-8.0.27/bin/startup.sh
+
+Compilar WEB -> javac -cp "Diretorio das libs" "Pasta dos .java"
+
+Gerar .WAR -> jar -cvf "nome.war" "diretorio (.)"
+
+Jogar no Apache -> cp "arquivo.war" ~/Programas/apache-tomcat-8.0.27/webapps/
