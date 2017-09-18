@@ -28,6 +28,7 @@ public class FilaListaEncadeada implements IFila{
     public void enfileirar(Object o){
     	No aux = new No(o, node);
     	node = aux;
+        aux = null;
     	t++;
     }
     

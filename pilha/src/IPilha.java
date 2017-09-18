@@ -1,12 +1,8 @@
-package modelo;
-
-import excecoes.EPilhaVazia;
-
 /**
  *
  * @author Felipe
  */
-public interface Pilha {
+public interface IPilha {
     public int size();
     
     public boolean isEmpty();

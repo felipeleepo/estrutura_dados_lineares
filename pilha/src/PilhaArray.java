@@ -1,13 +1,8 @@
-package array;
-
-import modelo.Pilha;
-import excecoes.EPilhaVazia;
-
 /**
  *
  * @author Felipe
  */
-public class PilhaArray implements Pilha {
+public class PilhaArray implements IPilha {
     private Object S[];
     private int  t, op = 0;
     // OP <= 0: DUPLICA A PILHA
@@ -63,10 +58,11 @@ public class PilhaArray implements Pilha {
         throw e;        
     }
     
-    public void print(){
-        System.out.println("---PRINT---");
+    public String toString(){
+        String result = "---- PRINT ----";
         for(int i = 0; i<size();i++)
-            System.out.println("S["+i+"] = "+S[i]);                
+            result += "\n" + i + " - " + S[i];
+        return result; 
     }
     
     public void aumentar(Object o){

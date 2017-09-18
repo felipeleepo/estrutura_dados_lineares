@@ -1,5 +1,5 @@
 //import No;
-public class PilhaListaEncadeada{
+public class PilhaListaEncadeada implements IPilha{
 	private No node;
 	private int t;
 
@@ -16,8 +16,10 @@ public class PilhaListaEncadeada{
 		return t == 0;
 	}
 
-	public Object top(){
-		return node.getO();
+	public Object top() throws EPilhaVazia{
+		if(!isEmpty())
+			return node.getO();
+		throw new EPilhaVazia("Pilha Vazia.");
 	}
 
 	public Object pop() throws EPilhaVazia{
@@ -32,18 +34,23 @@ public class PilhaListaEncadeada{
 	}
 
 	public void push(Object o){
-		No aux = new No (o, node);
-		node = aux;	
-		
+		No aux;
+		if(isEmpty())
+			aux = new No(o, null);
+		else
+			aux = new No(o, node);
+		node = aux;			
 		t++;
 	}
 
 	public String toString(){
-		String result = "";
+		String result = "---- PRINT ----";
 		No aux = node;
+		int i = 0;
 		while(aux != null){
-			result += aux.getO() + "\n";
+			result += "\n" + i + " - "+ aux.getO();
 			aux = aux.getNext();
+			i++;
 		}
 		return result;
 	}
