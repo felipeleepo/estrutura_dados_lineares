@@ -45,35 +45,30 @@ public class Vetor implements IVetor{
 
     public String insertAtRank(int r, Object o) throws ERankInvalido{
 		if(r >= 0 && r < S.length){
-            //if(elemAtRank(r) == null){
-    			if (size()+1 < S.length) {
-
-        			for (int i = size() - 1; i > r; i-- ) {
-
-    					S[i] = S[i-1];
-    				}
-                    if (S[r] == null)
-                        tam++;                    
-    				S[r] = o;
-                    return "Valor inserido.";
-    			}else{
-
-                    System.out.println("O vetor foi aumentado.");
-    				aumentar();
-                    return insertAtRank(r, o);
-    			}
-           /* }
-            r\eturn "Índice já preenchido, utilize o replaceAtRank";            */
+			if(size() < S.length) {
+    			for(int i = size(); i > r; i--)
+					S[i] = S[i-1];				
+                tam++;                    
+				S[r] = o;
+                return "Valor inserido.";
+			}else{
+                System.out.println("O vetor foi aumentado.");
+				aumentar();
+                return insertAtRank(r, o);
+			}
 		}
 		throw new ERankInvalido("Rank Inválido");
     }
 
     public Object removeAtRank(int r) throws EVetorVazio, ERankInvalido{
     	if(!isEmpty()){
-    		if(r >= 0 && r < tam){
+    		if(r >= 0 && r < S.length){
     			Object aux = S[r];
-    			for (int i = r+1; i < size()-1 ; i++ ) {
+    			for (int i = r+1; i <= size() ; i++ ) {
     				S[i-1] = S[i];
+                    if(i == size()){
+                        S[i] = null;
+                    }
     			}
                 if(aux != null)
                     tam--;
@@ -87,18 +82,17 @@ public class Vetor implements IVetor{
     public void aumentar(){
         int n;
         Object aux[];
-        if(op <= 0){
-            n = (size()+1)*2;
-        }
-        else{
-            n = size()+1+op;
-        }
+        if(op <= 0)
+            n = S.length * 2;
+        else
+            n = S.length + op;
         aux = new Object[n];
         aux = S.clone();
         S = new Object[n]; 
-        for(int i = 0; i<aux.length;i++)
-            S[i] = aux[i];   
-
+        for(int i = 0; i<aux.length;i++){
+            S[i] = aux[i];
+            System.out.println(i +" - " + S[i]);  
+        }
     }
 
     public String toString(){
