@@ -78,8 +78,8 @@ class Menu{
         }
     }
 
-   /* public void lista(){
-        PilhaListaEncadeada p = new PilhaListaEncadeada();
+    /*public void lista(){
+        Lista l = new Lista();
         Scanner s = new Scanner(System.in);
         boolean loop2 = true;
         int escolha2;
